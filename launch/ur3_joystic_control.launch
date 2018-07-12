@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="joy" type="joy_node" name="joy_state_pub">
+        <param name="coalesce_interval" value="0.08"/>
+        <param name="deadzone" value="0.05"/>
+        <param name="autorepeat_rate" value="0"/>
+        <param name="dev" value="/dev/input/js0"/>
+    </node>
+
+    <node pkg="ur3_joystick_control" type="joycommand_publisher" name="joycommand_publisher"/>
+</launch>
